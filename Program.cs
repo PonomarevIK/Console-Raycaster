@@ -1,7 +1,7 @@
 ﻿using static System.Math;
 
 const int screenWidth = 120;    // default console size is 120 characters wide
-const int screenHeight = 30;    //                     and 30 character high
+const int screenHeight = 30;    //                      and 30 character high
 const int unit = 64;            // arbitrary unit of distance equal to one square on the map
 const int mapSize = 8;
 
@@ -156,7 +156,7 @@ while (true)
             }                                        
         }
 
-        if (distV < distH) { dist = distV; wall = '▓'; }
+        if (distV < distH) { dist = distV; wall = '▓'; }         // vertical walls are a slightly lighter shade
         else               { dist = distH; wall = '█'; }
 
         dist *= Cos(DegToRad(camAngle - rayAngle));              // fix fisheye effect
